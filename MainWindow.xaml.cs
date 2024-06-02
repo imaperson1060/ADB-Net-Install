@@ -69,11 +69,11 @@ namespace ADB_Net_Install {
 			AdbClient client = new();
 			client.Connect("127.0.0.1:62001");
 			DeviceData device = client.GetDevices().FirstOrDefault();
+			Cursor = Cursors.Arrow;
 			if (device.IsEmpty) {
 				MessageBox.Show("No device found.");
 				return;
 			}
-			Cursor = Cursors.Arrow;
 
 			if (!APKName_TextBlock.ToolTip.ToString()!.EndsWith(".apk")) {
 				File.Move(APKName_TextBlock.ToolTip.ToString()!, APKName_TextBlock.ToolTip.ToString() + ".apk", true);
