@@ -1,0 +1,22 @@
+name: Build installer and release
+on:
+  push:
+    tags:
+      - v*.*.*
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+      - name: Restore dependencies and build
+        run: dotnet build -c Release
+      - name: Create installer
+        uses: joncloud/makensis-action@v4.1
+      - name: Upload to Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          files: install.exe
+          token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
