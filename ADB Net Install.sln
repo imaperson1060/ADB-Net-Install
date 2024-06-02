@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADB Net Install", "ADB Net Install.csproj", "{5376CE89-6648-4C7E-9784-0F3618A17199}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5376CE89-6648-4C7E-9784-0F3618A17199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5376CE89-6648-4C7E-9784-0F3618A17199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5376CE89-6648-4C7E-9784-0F3618A17199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5376CE89-6648-4C7E-9784-0F3618A17199}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D9B5B0C-AB2D-4EE0-A9BD-850BEAB5F5CB}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,77 @@
+﻿<Window x:Class="ADB_Net_Install.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="ADB Net Install" Height="400" Width="450"
+		ResizeMode="NoResize"
+		Background="#5762D6">
+	<Grid>
+		<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,30,0,0" Text="ADB Net Installer" FontSize="36" Foreground="White" />
+		<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,69,0,0" FontSize="10" Foreground="White">
+			by
+			<Hyperlink NavigateUri="https://imaperson.dev" RequestNavigate="Hyperlink_RequestNavigate" Foreground="#FF32E1E1">@imaperson1060</Hyperlink>
+		</TextBlock>
+
+		<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,100,0,0" Text="URL" Foreground="White" />
+		<TextBox Name="URLInput" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,100,0,0" TextWrapping="NoWrap" Width="200" TextChanged="URLInput_TextChanged">
+			<TextBox.Resources>
+				<Style TargetType="Border">
+					<Setter Property="CornerRadius" Value="2" />
+				</Style>
+			</TextBox.Resources>
+		</TextBox>
+		<Button Name="DownloadBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="278,99,0,0" Content="Download" BorderBrush="Transparent" Click="DownloadBtn_Click" IsEnabled="False">
+			<Button.Resources>
+				<Style TargetType="Border">
+					<Setter Property="CornerRadius" Value="2" />
+				</Style>
+			</Button.Resources>
+		</Button>
+
+		<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,130,0,0">
+			<Hyperlink NavigateUri="https://tmpfiles.org" RequestNavigate="Hyperlink_RequestNavigate" Foreground="#FF32E1E1">tmpfiles.org</Hyperlink>
+		</TextBlock>
+		<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="110,130,0,0" Text="/" Foreground="White" />
+		<TextBox Name="TmpFilesIDInput" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="118,130,0,0" TextWrapping="Wrap" Width="55" TextChanged="TmpFilesInput_TextChanged">
+			<TextBox.Resources>
+				<Style TargetType="Border">
+					<Setter Property="CornerRadius" Value="2" />
+				</Style>
+			</TextBox.Resources>
+		</TextBox>
+		<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="175,130,0,0" Text="/" Foreground="White" />
+		<TextBox Name="TmpFilesNameInput" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="183,130,0,0" TextWrapping="NoWrap" Width="92" TextChanged="TmpFilesInput_TextChanged">
+			<TextBox.Resources>
+				<Style TargetType="Border">
+					<Setter Property="CornerRadius" Value="2" />
+				</Style>
+			</TextBox.Resources>
+		</TextBox>
+		<Button Name="TmpFilesPasteBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="278,129,0,0" Content="Paste" BorderBrush="Transparent" Click="TmpFilesPasteBtn_Click">
+			<Button.Resources>
+				<Style TargetType="Border">
+					<Setter Property="CornerRadius" Value="2" />
+				</Style>
+			</Button.Resources>
+		</Button>
+		<Button Name="TmpFilesDownloadBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="314,129,0,0" Content="Download" BorderBrush="Transparent" Click="TmpFilesDownloadBtn_Click" IsEnabled="False">
+			<Button.Resources>
+				<Style TargetType="Border">
+					<Setter Property="CornerRadius" Value="2" />
+				</Style>
+			</Button.Resources>
+		</Button>
+
+		<Button Name="FlashBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,200,0,0" Content="Flash APK" BorderBrush="Transparent" FontSize="18" Click="FlashBtn_Click" IsEnabled="False">
+			<Button.Resources>
+				<Style TargetType="Border">
+					<Setter Property="CornerRadius" Value="2" />
+				</Style>
+			</Button.Resources>
+		</Button>
+		<TextBlock Name="APKName_TextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="131,206,0,0" TextWrapping="NoWrap" Text="[no file downloaded]" Width="250" Foreground="#FF969696" />
+		<TextBlock Name="APKWarning_TextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,233,0,0" TextWrapping="Wrap" Text="Please note that the temporary downloaded file does not have the file extension .apk. It will be automatically renamed upon flashing." Width="250" Foreground="#FF964B32" Visibility="Hidden" />
+	</Grid>
+</Window>
