@@ -93,7 +93,7 @@ SectionEnd
 
 Section "Desktop Shortcuts" d
 
-  CreateShortcut "$DESKTOP\adb.net.lnk" "$INSTDIR\adb.net.exe"
+  CreateShortcut "$DESKTOP\adb.net.lnk" "$INSTDIR\ADB Net Install.exe"
   
 SectionEnd
 
