@@ -84,7 +84,7 @@ namespace ADB_Net_Install {
 			if (MessageBox.Show($"The following file will be installed to your device ({device.Name}): {APKName_TextBlock.Text}", "Confirm installation", MessageBoxButton.YesNo) != MessageBoxResult.Yes) return;
 
 			PackageManager pm = new(client, device);
-			try { pm.InstallPackage((string)APKName_TextBlock.ToolTip, (InstallProgressEventArgs e) => { if (e.PackageFinished == 1 && e.PackageRequired == 1 && e.State == PackageInstallProgressState.PostInstall) MessageBox.Show("Installation successful."); }); }
+			try { pm.InstallPackage((string)APKName_TextBlock.ToolTip, (InstallProgressEventArgs e) => { if (e.PackageFinished == 1 && e.PackageRequired == 1 && e.State == PackageInstallProgressState.PostInstall) MessageBox.Show("Installation successful."); }, "-r"); }
 			catch (PackageInstallationException) { MessageBox.Show("Installation failed due to an error. Try making sure the file you downloaded is an APK. Hover the file name to view the full temporary path."); }
 		}
 
