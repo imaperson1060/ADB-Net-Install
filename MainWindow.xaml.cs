@@ -19,7 +19,7 @@ namespace ADB_Net_Install {
 
 		private void TmpFilesInput_TextChanged(object sender, TextChangedEventArgs e) {
 			TmpFilesPasteEvent();
-			if (TmpFilesIDInput.Text.Length == 7 && int.TryParse(TmpFilesIDInput.Text, out _) && TmpFilesNameInput.Text.Length != 0) {
+			if (TmpFilesIDInput.Text.Length == 8 && int.TryParse(TmpFilesIDInput.Text, out _) && TmpFilesNameInput.Text.Length != 0) {
 				string url = $"https://tmpfiles.org/{TmpFilesIDInput.Text}/{TmpFilesNameInput.Text}";
 				Cursor = Cursors.Wait;
 				HttpResponseMessage response = new HttpClient().SendAsync(new HttpRequestMessage(HttpMethod.Head, url)).Result;
@@ -40,7 +40,7 @@ namespace ADB_Net_Install {
 			if (data.StartsWith("http://")) data = data.Remove(0, 7);
 			if (data.StartsWith("https://")) data = data.Remove(0, 8);
 			string[] parts = data.Split('/');
-			if ((parts.Length != 3 || !parts[0].Equals("tmpfiles.org", StringComparison.OrdinalIgnoreCase) || parts[1].Length != 7 || !int.TryParse(parts[1], out _) || parts[2].Length == 0) && (parts.Length != 4 || !parts[0].Equals("tmpfiles.org", StringComparison.OrdinalIgnoreCase) || !parts[1].Equals("dl", StringComparison.OrdinalIgnoreCase) || parts[1].Length != 7 || !int.TryParse(parts[2], out _) || parts[3].Length == 0)) {
+			if ((parts.Length != 3 || !parts[0].Equals("tmpfiles.org", StringComparison.OrdinalIgnoreCase) || parts[1].Length != 8 || !int.TryParse(parts[1], out _) || parts[2].Length == 0) && (parts.Length != 4 || !parts[0].Equals("tmpfiles.org", StringComparison.OrdinalIgnoreCase) || !parts[1].Equals("dl", StringComparison.OrdinalIgnoreCase) || parts[1].Length != 8 || !int.TryParse(parts[2], out _) || parts[3].Length == 0)) {
 				if (fromButton) MessageBox.Show("The data in the clipboard is not a valid tmpfiles.org URL.");
 				return;
 			}

@@ -34,29 +34,29 @@
 			<Hyperlink NavigateUri="https://tmpfiles.org" RequestNavigate="Hyperlink_RequestNavigate" Foreground="#FF32E1E1">tmpfiles.org</Hyperlink>
 		</TextBlock>
 		<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="110,130,0,0" Text="/" Foreground="White" />
-		<TextBox Name="TmpFilesIDInput" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="118,130,0,0" TextWrapping="Wrap" Width="55" TextChanged="TmpFilesInput_TextChanged">
+		<TextBox Name="TmpFilesIDInput" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="118,130,0,0" TextWrapping="Wrap" Width="60" TextChanged="TmpFilesInput_TextChanged">
 			<TextBox.Resources>
 				<Style TargetType="Border">
 					<Setter Property="CornerRadius" Value="2" />
 				</Style>
 			</TextBox.Resources>
 		</TextBox>
-		<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="175,130,0,0" Text="/" Foreground="White" />
-		<TextBox Name="TmpFilesNameInput" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="183,130,0,0" TextWrapping="NoWrap" Width="92" TextChanged="TmpFilesInput_TextChanged">
+		<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,130,0,0" Text="/" Foreground="White" />
+		<TextBox Name="TmpFilesNameInput" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="188,130,0,0" TextWrapping="NoWrap" Width="92" TextChanged="TmpFilesInput_TextChanged">
 			<TextBox.Resources>
 				<Style TargetType="Border">
 					<Setter Property="CornerRadius" Value="2" />
 				</Style>
 			</TextBox.Resources>
 		</TextBox>
-		<Button Name="TmpFilesPasteBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="278,129,0,0" Content="Paste" BorderBrush="Transparent" Click="TmpFilesPasteBtn_Click">
+		<Button Name="TmpFilesPasteBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="283,129,0,0" Content="Paste" BorderBrush="Transparent" Click="TmpFilesPasteBtn_Click">
 			<Button.Resources>
 				<Style TargetType="Border">
 					<Setter Property="CornerRadius" Value="2" />
 				</Style>
 			</Button.Resources>
 		</Button>
-		<Button Name="TmpFilesDownloadBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="314,129,0,0" Content="Download" BorderBrush="Transparent" Click="TmpFilesDownloadBtn_Click" IsEnabled="False">
+		<Button Name="TmpFilesDownloadBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="319,129,0,0" Content="Download" BorderBrush="Transparent" Click="TmpFilesDownloadBtn_Click" IsEnabled="False">
 			<Button.Resources>
 				<Style TargetType="Border">
 					<Setter Property="CornerRadius" Value="2" />
